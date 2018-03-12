@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片格式验证test</title>
+</head>
+<body>
+<label>请上传图片：</label><input type="file" id="file">
+
+<script>
+    window.onload=function () {
+        var file=document.getElementById('file');
+        file.onchange=function () {
+            var name=file.value;
+            var dec=name.slice(-3);
+            var decr=dec.toLowerCase();
+            if(decr==='jpg'||decr==='png'||decr==='gif'){
+                alert('right')
+            }else{
+                alert('wrong')
+            }
+        }
+    }
+</script>
+</body>
+</html>
